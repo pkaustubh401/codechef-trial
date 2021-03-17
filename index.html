@@ -391,7 +391,7 @@
 								</div>
 							</form> -->
 							
-							<form id="requestForm" method="post" action="php/form.php">
+							<form id="requestForm" method="post" action="form.php">
 								<div class="form-group">
 									<input type="text" name="name" id="rname" class="form-control-input notEmpty" value="<?php echo isset($_POST['name']) ? $name : ''; ?>">
 									<label class="label-control" for="name">Name</label>
@@ -401,19 +401,19 @@
 									<label class="label-control" for="email">Email</label>
 								</div>
 								<div class="form-group">
-									<input type="text" name="codechef" id="rcodechef" class="form-control-input notEmpty" value="<?php echo isset($_POST['email']) ? $email : ''; ?>">
+									<input type="text" name="codechef" id="rcodechef" class="form-control-input notEmpty" value="<?php echo isset($_POST['codechef]) ? $codechef : ''; ?>">
 									<label class="label-control" for="codechef">Codechef Username</label>
 								</div>
 								<div class="form-group">
-									<input type="tel" name="phone" id="rphone" class="form-control-input notEmpty" value="<?php echo isset($_POST['email']) ? $email : ''; ?>">
+									<input type="tel" name="phone" id="rphone" class="form-control-input notEmpty" value="<?php echo isset($_POST['phone']) ? $phone : ''; ?>">
 									<label class="label-control" for="phone">Phone number</label>
 								</div>
 								<div class="form-group">
-									<input type="text" name="department" id="rdepartment" class="form-control-input notEmpty" value="<?php echo isset($_POST['email']) ? $email : ''; ?>">
+									<input type="text" name="department" id="rdepartment" class="form-control-input notEmpty" value="<?php echo isset($_POST['department']) ? $department : ''; ?>">
 									<label class="label-control" for="department">department</label>
 								</div>
 								<div class="form-group">
-									<input type="number" min="2019" max="2024" class="form-control-input notEmpty" id="rgraduation" name="graduation" value="<?php echo isset($_POST['email']) ? $email : ''; ?>">
+									<input type="number" min="2019" max="2024" class="form-control-input notEmpty" id="rgraduation" name="graduation" value="<?php echo isset($_POST['graduation']) ? $graduation : ''; ?>">
 									<label class="label-control" for="graduation">Graduation year </label>
 								</div>
 
@@ -422,7 +422,7 @@
 									<textarea name="message" class="form-control"><?php echo isset($_POST['message']) ? $message : ''; ?></textarea>
 								</div>
 								<br>
-								<button type="submit" name="submit" class="form-control-submit-button">Submit</button>
+								<button id="sub-btn" type="submit" name="submit" value="send" class="form-control-submit-button">Submit</button>
 								<div class="form-message">
 									<div id="rmsgSubmit" class="h3 text-center hidden">
 										<?php if ($msg != '') : ?>

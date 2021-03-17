@@ -149,6 +149,10 @@
 		}
 	});
 
+	
+	$("#sub-btn").click(function(event) {
+	event.preventDefault();
+	});
 	/* Request Form */
 	// $('#requestForm')
 	// 	.validator()
